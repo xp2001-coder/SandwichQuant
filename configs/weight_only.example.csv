@@ -1,0 +1,5 @@
+job_id,priority,lane,enabled,model_key,model_path,method,bits,group_size,seed,run_nap,external_artifact
+rtn_w3,0,main,1,qwen3_8b,${MODEL_PATH},rtn,3,128,0,1,
+gptq_w3,1,main,1,qwen3_8b,${MODEL_PATH},gptq,3,128,0,1,
+gptaq_w3,2,main,1,qwen3_8b,${MODEL_PATH},gptaq,3,128,0,1,
+rescomp_w3,3,main,1,qwen3_8b,${MODEL_PATH},rescomp_gptaq,3,128,0,1,

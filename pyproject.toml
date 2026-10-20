@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sandwichquant"
+version = "0.1.0"
+description = "Normalization-affine calibration around post-training quantization"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "accelerate==1.9.0",
+  "datasets==3.6.0",
+  "numpy>=1.26,<3",
+  "pyarrow>=16",
+  "safetensors>=0.4.5",
+  "sentencepiece>=0.2.0",
+  "transformers==4.54.1",
+]
+
+[project.optional-dependencies]
+evaluation = ["lm-eval==0.4.9.1"]
+gptqmodel = ["gptqmodel==5.7.0"]
+external = ["portalocker>=2.8", "primefac==2.0.12", "scipy>=1.11"]
+
+[tool.setuptools.packages.find]
+include = ["nap_llm*"]
